@@ -38,4 +38,13 @@ public class FirstMVCController {
         return mv;
 
     }
+
+    @GetMapping("/home/alien")
+    public ModelAndView setAliens(Alien alien){
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("obj", alien);
+        mv.setViewName("alien");
+        return mv;
+
+    }
 }
